@@ -13,14 +13,14 @@ namespace SomeMethods
         {
             Values method = new Values();
             int x = method.EquationReturnX(3, 62, 21);
-            string str = method.NotationOfNumber(99);
+            string str = method.NotationOfNumber(20);
             bool h = method.FindRange(0);
-            int sum = method.ReturnSummOfValuesFromAtoBDivOnSeven(1, 10);
-            int f = method.FindFibonachiValue(7);
-            int odd = method.FindOddValuesOfNumber(7);
-            int reverse = method.ReverseValue(423);
-            bool result = method.CompareValues(322, 4265555);
-            Console.WriteLine(odd);
+            int sum = method.ReturnSummOfValuesFromAtoBDivOnSeven(-10, 20);
+            int f = method.FindFibonachiValue(2);
+            int odd = method.FindOddValuesOfNumber(000);
+            int reverse = method.ReverseValue(-2);
+            bool result = method.CompareValues(322, -322);
+            Console.WriteLine(result);
             Console.ReadLine();
         }
     }

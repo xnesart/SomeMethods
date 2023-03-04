@@ -45,7 +45,7 @@ namespace SomeMethods.Classes
         //Верните прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.
         public string NotationOfNumber(int value)
         {
-            if (value < 10 && value > 99)
+            if (value < 10 || value > 99 || value == 0)
             {
                 throw new ArgumentException("Ожидалось двузначное число, ошибка");
             }
@@ -177,6 +177,10 @@ namespace SomeMethods.Classes
         //диапазона от A до B, которые делятся на 7.
         public int ReturnSummOfValuesFromAtoBDivOnSeven(int a, int b)
         {
+            if (a > b)
+            {
+                throw new ArgumentException("первое число больше второго, ошибка");
+            }
             int sum = 0;
             for (int i = a; i <= b; i++)
             {
@@ -191,6 +195,10 @@ namespace SomeMethods.Classes
         //Метод получает на вход положительное число (N). Верните N-ое число ряда Фибоначчи.
         public int FindFibonachiValue(int value)
         {
+            if (value < 0)
+            {
+                throw new ArgumentException("аргумент не может быть меньше 0");
+            }
             int fb1 = 1;
             int fb2 = 1;
             int fibonachi = 1;
@@ -234,6 +242,12 @@ namespace SomeMethods.Classes
         //Метод получает на вход число. Найти число, которое является зеркальным
         public int ReverseValue(int value)
         {
+            int negativeControl = 0;
+            if (value < 0)
+            {
+                value *= -1;
+                negativeControl++;
+            }
             string newValueString = "";
             int newValue = 0;
             if (value % 10 == 0)
@@ -246,6 +260,10 @@ namespace SomeMethods.Classes
                 value /= 10;
             }
             newValue = int.Parse(newValueString);
+            if (negativeControl == 1)
+            {
+                newValue *= -1;
+            }
 
             return newValue;
         }
@@ -253,6 +271,13 @@ namespace SomeMethods.Classes
         //Например, для пары 123 и 345, ответом будет являться true, а, для пары 500 и 999 - false.
         public bool CompareValues(int a, int b)
         {
+            if (a < 0 && b > 0)
+            {
+                a *= -1;
+            } else if (b < 0 && a > 0)
+            {
+                b *= -1;
+            }
             int temp1 = 0;
             int temp2 = 0;
             bool result = false;
