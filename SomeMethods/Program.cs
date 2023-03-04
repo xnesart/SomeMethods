@@ -11,16 +11,16 @@ namespace SomeMethods
     {
         static void Main(string[] args)
         {
-            Class1 method = new Class1();
-            int x = method.EquationReturnX(3, 14, 25);
+            Values method = new Values();
+            int x = method.EquationReturnX(3, 62, 21);
             string str = method.NotationOfNumber(99);
             bool h = method.FindRange(0);
             int sum = method.ReturnSummOfValuesFromAtoBDivOnSeven(1, 10);
             int f = method.FindFibonachiValue(7);
-            int odd = method.FindOddValuesOfNumber(0);
+            int odd = method.FindOddValuesOfNumber(7);
             int reverse = method.ReverseValue(423);
             bool result = method.CompareValues(322, 4265555);
-            Console.WriteLine(result);
+            Console.WriteLine(odd);
             Console.ReadLine();
         }
     }
