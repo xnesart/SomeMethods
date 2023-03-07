@@ -1,5 +1,4 @@
 using SomeMethods.Classes;
-using System;
 
 namespace SomeMethods.Test.Classes.Classes;
 
