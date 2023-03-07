@@ -15,6 +15,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [Test]
     public void EquationReturnXTests_WhenDivideByZero_ShouldArgumentException()
     {
@@ -24,6 +25,7 @@ public class ValuesTests
         int c = 7;
         Assert.Throws<ArgumentException>(()=> values.EquationReturnX(a,b,c));
     }
+    
     [TestCase(3,1,4)]
     [TestCase(3,8,-5)]
     [TestCase(5,5,25)]
@@ -34,6 +36,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [TestCase(25,"двадцать пять")]
     [TestCase(31,"тридцать один")]
     [TestCase(66,"шестьдесят шесть")]
@@ -44,6 +47,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [Test]
     public void NotationOfNumberTests_WhenArgumentLessTen_ShouldArgumentException()
     {
@@ -52,6 +56,7 @@ public class ValuesTests
 
         Assert.Throws<ArgumentException>(()=> values.NotationOfNumber(value));
     }
+    
     [Test]
     public void NotationOfNumberTests_WhenArgumentBiggestNinetyNine_ShouldArgumentException()
     {
@@ -60,6 +65,7 @@ public class ValuesTests
 
         Assert.Throws<ArgumentException>(()=> values.NotationOfNumber(value));
     }
+    
     [TestCase(5,true)]
     [TestCase(15,false)]
     [TestCase(25,true)]
@@ -72,6 +78,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [TestCase(-10,20,4)]
     [TestCase(15,35,3)]
     [TestCase(0,21,4)]
@@ -82,6 +89,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [Test]
     public void ReturnSummOfValuesFromAtoBDivOnSevenTests_WhenFirstArgBiggestSecond_ShouldArgumentException()
     {
@@ -91,6 +99,7 @@ public class ValuesTests
 
         Assert.Throws<ArgumentException>(()=> values.ReturnSummOfValuesFromAtoBDivOnSeven(a,b));
     }
+    
     [TestCase(3,2)]
     [TestCase(5,5)]
     [TestCase(7,13)]
@@ -101,6 +110,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [Test]
     public void FindFibonachiValueTests_WhenArgumentLessZero_ShouldArgumentException()
     {
@@ -109,6 +119,7 @@ public class ValuesTests
 
         Assert.Throws<ArgumentException>(()=> values.FindFibonachiValue(value));
     }
+    
     [TestCase(77,2)]
     [TestCase(76,1)]
     [TestCase(8,0)]
@@ -121,6 +132,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [TestCase(132,231)]
     [TestCase(874165,561478)]
     [TestCase(1067834,4387601)]
@@ -132,6 +144,7 @@ public class ValuesTests
 
         Assert.AreEqual(expected, actual);
     }
+    
     [Test]
     public void ReverseValueTests_WhenArgumentFinishOnZero_ShouldArgumentException()
     {
@@ -140,6 +153,7 @@ public class ValuesTests
 
         Assert.Throws<ArgumentException>(()=> values.ReverseValue(value));
     }
+    
     [TestCase(541,145, true)]
     [TestCase(541,768, false)]
     [TestCase(0,0, true)]

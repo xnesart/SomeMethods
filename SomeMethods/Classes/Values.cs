@@ -16,6 +16,7 @@ namespace SomeMethods.Classes
 
             return x;
         }
+        
         //2) Метод получает на вход 2 числа (A и B).
         //Если A больше B, подсчитать A+B, если A равно B, подсчитать A*B, если A меньше B, подсчитать A-B.
         public int CompareNumbersAndCalculate(int a, int b)
@@ -41,6 +42,7 @@ namespace SomeMethods.Classes
 
             return result;
         }
+        
         //Метод получает на вход двузначное число.
         //Верните прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.
         public string NotationOfNumber(int value)
@@ -159,6 +161,7 @@ namespace SomeMethods.Classes
             }
             return result;
         }
+        
         //Метод получает на вход число. Проверить попадает ли оно в один из диапазонов:
         //от 0 до 10, от 20 до 30 или от 40 до 50.
         //*Здесь хорошим вариантом будет вернуть true или false.
@@ -173,6 +176,7 @@ namespace SomeMethods.Classes
                 return false;
             }
         }
+        
         //Метод получает на вход 2 числа (A и B). Верните сумму всех чисел из
         //диапазона от A до B, которые делятся на 7.
         public int ReturnSummOfValuesFromAtoBDivOnSeven(int a, int b)
@@ -192,6 +196,7 @@ namespace SomeMethods.Classes
 
             return sum;
         }
+        
         //Метод получает на вход положительное число (N). Верните N-ое число ряда Фибоначчи.
         public int FindFibonachiValue(int value)
         {
@@ -218,6 +223,7 @@ namespace SomeMethods.Classes
                 return fibonachi;
             }
         }
+        
         //Метод получает на вход число. Найти количество нечетных цифр этого числа.
         public int FindOddValuesOfNumber(int value)
         {
@@ -239,6 +245,7 @@ namespace SomeMethods.Classes
 
             return odd;
         }
+        
         //Метод получает на вход число. Найти число, которое является зеркальным
         public int ReverseValue(int value)
         {
